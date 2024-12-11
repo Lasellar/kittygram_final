@@ -35,6 +35,12 @@ jobs:
         run:
           python -m flake8 backend/
       - name: Test with django tests
+        env:
+          POSTGRES_USER: django_user
+          POSTGRES_PASSWORD: django_password
+          POSTGRES_DB: django_db
+          DB_HOST: 127.0.0.1
+          DB_PORT: 5432
         run: cd backend && python manage.py test
   build_backend_and_push_to_docker_hub:
     name: Push backend docker image to Docker Hub
