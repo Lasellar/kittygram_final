@@ -6,10 +6,6 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 load_dotenv()
-print('\n' * 10)
-print("Загруженные переменные окружения:")
-print(os.environ)
-print('\n' * 10)
 SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = True
