@@ -121,8 +121,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
-    needs:
-      steps:
+    steps:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Copy docker-compose.production.yml via ssh
