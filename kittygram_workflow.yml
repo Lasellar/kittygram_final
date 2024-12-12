@@ -45,7 +45,7 @@ jobs:
   build_backend_and_push_to_docker_hub:
     name: Push backend docker image to Docker Hub
     needs:
-      - backend_tests
+      - backend-tests
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repo
